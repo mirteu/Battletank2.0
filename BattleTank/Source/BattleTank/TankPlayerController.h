@@ -2,10 +2,12 @@
 
 #pragma once
 
+//#include <string>
 #include "Tank.h"
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "TankPlayerController.generated.h"
+
 
 /**
  * 
@@ -25,6 +27,10 @@ public:
 
 	// Start the tank moving the barrel to shoot where aiming
 
-	void AimTowardsCrossHair();
-};
+		void AimTowardsCrossHair();
+
+		// Return an OUT parameter, true if hit landscape
+		bool GetSightRayHitLocation(FVector& HitLocation) const;
+	
+	};
 
